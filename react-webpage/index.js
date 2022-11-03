@@ -7,7 +7,7 @@ function ClickableButton() {
   if (clicked) {
     return React.createElement(
         'h1',
-        {},
+        {className: 'main-button'},
         'Hello, World'
       );
   }
