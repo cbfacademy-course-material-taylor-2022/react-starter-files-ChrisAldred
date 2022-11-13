@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const name = 'Chris';
+const name = 'CHris';
 const MY_NAME = 'Chris'
 
 function Profile(name){

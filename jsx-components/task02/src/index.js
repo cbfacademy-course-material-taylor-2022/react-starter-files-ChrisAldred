@@ -5,7 +5,7 @@ import Profile from './Profile';
 
 function App() {
   return (
-      <Profile name="Chris" bio="likes pizza."/>
+      <Profile name="Chris" bio="likes pizza." coloue="Purple"/>
   );
 }
 

@@ -3,6 +3,7 @@ function Profile(props){
         return <main id="content" role="main" className="base">
             <h1>{props.name}'s React Page</h1>
             <p>{props.bio}</p>
+            <h2>{props.colour}</h2>
         </main>
     } else if (props.name !== "") {
         return <main id="content" role="main" className="base">
