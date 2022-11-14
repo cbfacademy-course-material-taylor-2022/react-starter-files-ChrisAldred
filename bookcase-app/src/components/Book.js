@@ -1,5 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './BookStyle.css'
+
+function addBook(title) {
+  console.log(`The Book '${title}' was clicked`);
+}
 
 function Book({book: { id, saleInfo: {retailPrice}, volumeInfo: {title, authors, description, imageLinks: {thumbnail}}}}) {
   const titleStyle = {"fontWeight":"bold", "fontFamily":"verdana"};
@@ -23,6 +28,11 @@ function Book({book: { id, saleInfo: {retailPrice}, volumeInfo: {title, authors,
           <p style={descriptionStyle}>{description
             ? description.substring(0, 300) + "..."
             : "No description"}</p>
+        </div>
+        <div>
+          <button className="addButton" onClick={() => addBook(title)}>
+            + Add
+          </button>
         </div>
       </div>
     </main>
