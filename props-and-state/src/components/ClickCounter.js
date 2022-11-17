@@ -10,7 +10,7 @@ const ClickCounter = () => {
         <h2>Count: {count}</h2>
         <div>Click the button below to increment the counter</div>
         <button style={clickStyle} onClick={() => setCount(count + 1)}>Click!</button>
-        <button style={unclickStyle} onClick={() => setCount(count - 1)}>UnClick!</button>
+        <button style={unclickStyle} onClick={() => count > 0 && setCount(count - 1)}>UnClick!</button>
     </div>
     );
 }
