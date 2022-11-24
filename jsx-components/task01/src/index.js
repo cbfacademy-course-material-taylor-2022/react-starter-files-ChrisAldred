@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const name = 'CHris';
-const MY_NAME = 'Chris'
+const name = 'CHRIS';
+const myName = 'Chris'
 
 function Profile(name){
-  if (name.toUpperCase() === MY_NAME.toUpperCase()){
+  if (name.toUpperCase() === myName.toUpperCase()){
     return <main id="content" role="main" className="base">
     <h1>{name}'s React Page</h1>
       <p>{name} likes pizza.</p>

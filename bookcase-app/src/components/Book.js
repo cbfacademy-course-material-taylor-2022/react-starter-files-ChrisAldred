@@ -2,13 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './BookStyle.css'
 
-function addBook(title) {
-  console.log(`The Book '${title}' was clicked`);
-}
+function Book(props) {
 
-function Book({book: { id, saleInfo: {retailPrice}, volumeInfo: {title, authors, description, imageLinks: {thumbnail}}}}) {
-
-
+  const { id, saleInfo: {retailPrice}, volumeInfo: {title, authors, description, imageLinks: {thumbnail}}} = props.book;
+  
   return(
     <main>
       <div key={id} className="div">
@@ -24,8 +21,8 @@ function Book({book: { id, saleInfo: {retailPrice}, volumeInfo: {title, authors,
             : "No description"}</p>
         </div>
         <div>
-          <button className="addButton" onClick={() => addBook(title)}>
-            + Add
+          <button className="addButton" onClick={() => props.addToBookcase(id)}>
+            Add +
           </button>
         </div>
       </div>
